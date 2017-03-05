@@ -1,0 +1,54 @@
+$white: #555;
+$off-white: rgba($white, 0.2);
+$spin-duration: 1s;
+$pulse-duration: 750ms;
+
+
+$sm-line-height: 18px;
+$md-line-height: 24px;
+$lg-line-height: 30px;
+$xl-line-height: 36px;
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {  
+  50% { 
+    background: $white;
+  } 
+}
+
+.spinner {
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 50%;
+    width: $md-line-height;
+    height: $md-line-height;
+    border: .25rem solid $off-white;
+    border-top-color: $white;
+    animation: spin $spin-duration infinite linear;
+
+    &.sm{
+      width: $sm-line-height;
+      height: $sm-line-height;
+    }
+    &.md{
+      width: $md-line-height;
+      height: $md-line-height;
+    }
+    &.lg{
+      width: $lg-line-height;
+      height: $lg-line-height;
+    }
+    &.xl{
+      width: $xl-line-height;
+      height: $xl-line-height;
+    }
+}
