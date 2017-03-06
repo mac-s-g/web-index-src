@@ -1,4 +1,4 @@
-# ai-react project 
+# web-index-src web app source code
 
 This repo contains the source code required to build my github user index single-page-application.  The app is built with react and relies on [react-toolbox](https://github.com/react-toolbox/react-toolbox) for material-ui components. 
 
