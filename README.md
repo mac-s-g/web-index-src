@@ -1,16 +1,25 @@
 # ai-react project 
 
-This repo contains the react UI components website react front end.
+This repo contains the source code required to build my github user index single-page-application.  The app is built with react and relies on [react-toolbox](https://github.com/react-toolbox/react-toolbox) for material-ui components. 
+
+### Requirements
+1. Install docker
+2. Pull this repository
+3. cd into this repository
+..* `cd git/web-index-src`
+4. Build the container:
+⋅⋅* `docker build -t mac-react .`
+5. Access the app from localhost on port 2000 in your browser:
+..* `localhost:2000`
 
 ### Running
 
-To run the container:
+To run the container, run :
 
-    ./docker/server.sh
+```cd git/web-index-src
+./docker/server.sh```
 
-This will watch the `src` directory, and rebuild the files every time a
-file is saved. The output is in the `build` directory. Hot reloading is
-supported, so changes will be reflected in your browser immediately.
+This wil run the mac-react container and serve the web app on port 2000.  Webpack-dev-server watches the `src` directory, and rebuilds every time a file is saved. Webpack outputs build content to `build/assets/`. Hot reloading is supported, so changes will be reflected in your browser immediately.
 
 To quit the process, press `CTL-C`.
 
@@ -28,38 +37,14 @@ To run tests just once:
 
     ./docker/unit_test.sh
 
-#### Environments
-
-We need the react app to know about what environment it is in. For example,
-it needs to know whether to look for the API in the local, dev,
-or prod environment.
-
-This is accomplished with the `NODE_ENV` environment variable. Default is
-"local."
-
-You can access this variable in your react code as `process.env.NODE_ENV`.
-
-To specify "prod" as the environment for webpack, you would run the container
-as follows:
-
-    ./docker/server.sh prod
-
 ### Building
 
     docker build -t mac-react-app .
 
 If you make any changes to the Dockerfile, such as adding npm packages, you'll
 need to rebuild the image.
-
-When you merge a pull request in github, TeamCity will automatically build the
-latest version of the image, and if tests pass, will push that new version
-to quay.io
-
-## Design Architecture
-
-This app follows the react-flux design pattern:
-
-![alt text](doc/react-flux.png "React-Flux: Unidirectional Data Flow")
+```cd git/web-index-src
+docker build -t mac-react .```
 
 ### React Views and Components
 
@@ -93,6 +78,6 @@ These are stateless helper methods that can help manipulate strings, numbers, et
 
 ### Entrypoint
 
-See: 'src/entry.js'.
+See: 'src/js/entry.js'.
 
-Global imports and URL routing are configured here.
+This is the entrypoint for the web app.  Global imports and URL routing are configured here.

@@ -72,20 +72,20 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack -v --display-error-details --hot",
-    "test": "mocha -w --require ignore-styles /react/test/helpers/browser.js /react/test/*test.js",
+    "test": "mocha -w --require ignore-styles /react/test/helpers/browser.js /react/test/*test.js /react/test/**/*test.js",
     "dev:hot": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AVAai/ai-react.git"
+    "url": "git+https://github.com/mac-s-g/web-index-src"
   },
   "keywords": [],
   "author": "Mac Gainor",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AVAai/ai-react/issues"
+    "url": "https://github.com/mac-s-g/web-index-src/issues"
   },
-  "homepage": "https://github.com/AVAai/ai-react#readme",
+  "homepage": "mac-s-g.github.io",
   "directories": {
     "doc": "doc",
     "test": "test"
