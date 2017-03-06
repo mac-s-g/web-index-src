@@ -1,6 +1,6 @@
 # web app source code
 
-This repo contains the source code required to build my github user index single-page-application.  The app is built with react and relies on [react-toolbox](https://github.com/react-toolbox/react-toolbox) for material-ui components. 
+This repo contains the source code required to build my [github user index](https://mac-s-g.github.io/) single-page-application.  The app is built with react and relies on [react-toolbox](https://github.com/react-toolbox/react-toolbox) for material-ui components. 
 
 ### Requirements
 1. Install docker
