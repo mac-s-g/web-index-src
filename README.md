@@ -16,8 +16,10 @@ This repo contains the source code required to build my github user index single
 
 To run the container, run :
 
-```cd git/web-index-src
-./docker/server.sh```
+```
+cd git/web-index-src
+./docker/server.sh
+```
 
 This wil run the mac-react container and serve the web app on port 2000.  Webpack-dev-server watches the `src` directory, and rebuilds every time a file is saved. Webpack outputs build content to `build/assets/`. Hot reloading is supported, so changes will be reflected in your browser immediately.
 
@@ -43,8 +45,10 @@ To run tests just once:
 
 If you make any changes to the Dockerfile, such as adding npm packages, you'll
 need to rebuild the image.
-```cd git/web-index-src
-docker build -t mac-react .```
+```
+cd git/web-index-src
+docker build -t mac-react .
+```
 
 ### React Views and Components
 
