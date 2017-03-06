@@ -25,7 +25,7 @@ This wil run the mac-react container and serve the web app on port 2000.  Webpac
 
 To quit the process, press `CTL-C`.
 
-#### Unit tests
+### Unit tests
 
 To run unit tests:
 
