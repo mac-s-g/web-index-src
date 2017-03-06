@@ -8,7 +8,8 @@ This repo contains the source code required to build my github user index single
 3. cd into this repository
   * `cd git/web-index-src`
 4. Build the container:
-  * `docker build -t mac-react .`
+  * `docker build -t mac-react .` 
+  * note: try using `sudo` priveledge if you get permission errors from docker
 5. Access the app from localhost on port 2000 in your browser:
   * `localhost:2000`
 
