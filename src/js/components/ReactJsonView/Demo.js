@@ -29,13 +29,14 @@ export default class extends React.Component {
         displayObjectSize: true,
         enableClipboard: true,
         indentWidth: 4,
-        displayDataTypes: true
+        displayDataTypes: true,
+        iconStyle: 'triangle'
     }
 
     render() {
         const {
             src, collapseStringsAfter, onAdd, onEdit, onDelete,
-            displayObjectSize, enableClipboard, theme,
+            displayObjectSize, enableClipboard, theme, iconStyle,
             collapsed, indentWidth, displayDataTypes
         } = this.state;
         const style={
@@ -75,12 +76,17 @@ export default class extends React.Component {
                 enableClipboard={enableClipboard}
                 indentWidth={indentWidth}
                 displayDataTypes={displayDataTypes}
+                iconStyle={iconStyle}
             />
 
             <div class="rjv-settings">
                 <div class="rjv-input">
                     <div class="rjv-label">Theme:</div>
                     {this.getThemeInput(theme)}
+                </div>
+                <div class="rjv-input">
+                    <div class="rjv-label">Icon Style:</div>
+                    {this.getIconStyleInput(iconStyle)}
                 </div>
                 <div class="rjv-input">
                     <div class="rjv-label">Enable Edit:</div>
@@ -124,6 +130,21 @@ export default class extends React.Component {
             </div>
 
         </div>);
+    }
+
+    getIconStyleInput = (iconStyle) => {
+        return (
+            <ReactSelect
+                name="icon-style"
+                value={iconStyle}
+                options={[
+                    {value:"circle", label:"circle"},
+                    {value:"square", label:"square"},
+                    {value:"triangle", label:"triangle"},
+                ]}
+                onChange={(val) => {this.set('iconStyle', val)}}
+            />
+        );
     }
 
     getEditInput = (onEdit) => {

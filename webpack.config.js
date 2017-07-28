@@ -6,6 +6,7 @@ const PATHS = {
     src: path.join(__dirname, 'src'),
     js: path.join(__dirname, 'src/js'),
     style: path.join(__dirname, 'src/style'),
+    images: path.join(__dirname, 'src/style/images'),
     build: path.join(__dirname, 'dist'),
 };
 
@@ -77,6 +78,11 @@ const config = {
         }, {
           loader: "sass-loader"
         }]
+      },
+      {
+        test: /favicon\.ico$/,
+        loader: 'url-loader?limit=0',
+        include: PATHS.images
       }
     ]
   }
