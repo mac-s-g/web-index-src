@@ -15,7 +15,6 @@ ReactDom.render(
             link={[
                 {rel: "icon", href: favicon},
             ]}
-            title="mac-s-g"
         />
         <Index />
     </div>,

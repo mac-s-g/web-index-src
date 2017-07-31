@@ -50,8 +50,12 @@ export default class extends React.Component {
                 <div class="header-1">react-json-view</div>
                 <div class="header-2">component demo</div>
                 <img
-                    class="rjv-logo"
-                    src="https://github.com/mac-s-g/react-json-view/blob/master/doc/rjv-icon-alt.png?raw=true" />
+                class="rjv-logo"
+                src="https://github.com/mac-s-g/react-json-view/blob/master/doc/rjv-icon-alt.png?raw=true"
+                onClick={() => {
+                    window.open("https://github.com/mac-s-g/react-json-view", "_blank");
+                }}
+                />
             </div>
             <ReactJson
                 name={false}
