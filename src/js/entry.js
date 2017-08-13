@@ -1,10 +1,10 @@
 import ReactDom from 'react-dom';
 import Helmet from 'react-helmet';
 import Index from './index';
+import favicon from './../style/images/favicon.ico';
 
 require('./../style/scss/global.scss');
 
-const favicon = require('./../style/images/favicon.ico');
 
 const app = document.getElementById('mac-react-container');
 
